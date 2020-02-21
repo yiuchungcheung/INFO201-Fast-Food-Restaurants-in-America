@@ -33,7 +33,7 @@ Source 3: [link]
 
 5) Are certain groups of people more likely to live in an area with majority fast food options (possible factors include but are not limited to race, income/cost of living, etc.)
 
-##**Where did you download the data (e.g., a web URL)?**
+**Where did you download the data (e.g., a web URL)?**
 
 We downloaded the data from Kaggle.com 
 
@@ -43,21 +43,21 @@ We downloaded the data from Kaggle.com
 
 [Possible addition?](Include link here)
 
-##**How was the data collected or generated?**
+**How was the data collected or generated?**
 
 (Just for our reminder) -> Make sure to explain who collected the data (not necessarily the same people that host the data), and who or what the data is about?
 
 The fast food location data came from Datafiniti. They are a web data company that gather a lot of information from several websites and created a database for each category. 
 
-##**How many observations (rows) are in your data?**
+**How many observations (rows) are in your data?**
 
 Number of rows in the data: 
 
-##**How many features (columns) are in the data?**
+**How many features (columns) are in the data?**
 
 Number of columns in the data: 
 
-##**What questions (from above) can be answered using the data in this dataset?**
+**What questions (from above) can be answered using the data in this dataset?**
 
 [insert questions with applicable answers]
 

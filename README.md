@@ -1,13 +1,13 @@
 # Final Project
 
-##**Why are interested in this field/domain?**
+**Why are interested in this field/domain?**
 
 There are a lot of health related problems that are correlated to nutrition/food availability. 
 There are certain groups that are unjustly impacted more than others (by these specific diseases/illnesses).
 We wanted to look into these relationships and have a better understanding of who is being the most impacted (demographics), 
 where geographically it may be occurring the most, and by what specific health concerns. 
 
-##**What other examples of data driven projects have you found related to this domain (share at least 3)?**
+**What other examples of data driven projects have you found related to this domain (share at least 3)?**
 
 Source 1: [link] 
 
@@ -21,7 +21,7 @@ Source 3: [link]
 
 [Insert its significance]
 
-##**What data-driven questions do you hope to answer about this domain (share at least 3)?**
+**What data-driven questions do you hope to answer about this domain (share at least 3)?**
 
 1) Does the type of food someone is able to afford affect their quality of life?
 

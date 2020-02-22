@@ -88,4 +88,4 @@ Number of columns in the data: 153
 
 _What questions (from above) can be answered using the data in this dataset?_
 
-The questions regarding income trends in different locations (e.g. question 1). 
+We can look at how income trends differ in different locations and get an idea for how socioeconomic status (above or below poverty line) correlates to neighborhood. (e.g. question 1).

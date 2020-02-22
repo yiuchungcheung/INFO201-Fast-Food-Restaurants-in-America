@@ -43,7 +43,7 @@ Data Set 1: [Fast Food Chains Location data](https://www.kaggle.com/datafiniti/f
 
 Data Set 2: [National Health and Nutrition Examination Survey](https://www.kaggle.com/cdc/national-health-and-nutrition-examination-survey)
 
-Data Set 3: [Possible addition?](Include link here)
+Data Set 3: [SOI Tax Statistics](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2017-zip-code-data-soi)
 
 **How was the data collected or generated?**
 
@@ -59,7 +59,7 @@ Number of columns in the data: 15
 
 _What questions (from above) can be answered using the data in this dataset?_
 
-Looking at this data, we can answer questions regarding specific places within the U.S. that have more fast food locations (availability) than others. We can also look at which fast food chains are more prevalent in certain areas than others. 
+Looking at this data, we can answer questions regarding specific places within the U.S. that have more fast food locations (availability) than others. We can also look at which fast food chains are more prevalent in certain areas than others (e.g. question 3) 
 
 _**Data Set 2**_: This data originally came from the National Health and Nutrition Examination Survey which is part of the Center for Disease Control and Prevention. It is a program that began in the early 1960s that surveys a nationally representative of 5,000 people. It contains demographic, socioeconomic, dietary, and other relevant health related information that is a survey. There is also an examination portion in which these individuals undergo a medical examination and lab tests by trained medical professionals. It is organized as a collection of excel files.
 
@@ -73,21 +73,20 @@ Number of columns in the data: 13 to 953
 
 _What questions (from above) can be answered using the data in this dataset?_
 
-We can answer questions about how location, health, and socioeconomic status are related.
+We can answer questions about how location, health, and socioeconomic status are related (e.g. questions 2,4,5).
 
-_**Data Set 3**_: 
+_**Data Set 3**_: Statistics of Income (SOI) Division's ZIP code information is tabulated using individual income tax returns from IRS.
 
 _How many observations (rows) are in your data?_
 
-Number of rows in the data: 
+Number of rows in the data: 27760
 
 _How many features (columns) are in the data?_
 
-Number of columns in the data: 
+Number of columns in the data: 153 
 
 _What questions (from above) can be answered using the data in this dataset?_
 
-[Insert answer here]
-
+The questions regarding income and location (e.g. question 1). 
 
 

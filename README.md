@@ -63,17 +63,31 @@ Looking at this data, we can answer questions regarding specific places within t
 
 _**Data Set 2**_: This data originally came from the National Health and Nutrition Examination Survey which is part of the Center for Disease Control and Prevention. It is a program that began in the early 1960s that surveys a nationally representative of 5,000 people. It contains demographic, socioeconomic, dietary, and other relevant health related information that is a survey. There is also an examination portion in which these individuals undergo a medical examination and lab tests by trained medical professionals. It is organized as a collection of excel files.
 
-**How many observations (rows) are in your data?**
+_How many observations (rows) are in your data?_
 
 Number of rows in the data: 10.2k (We would have to narrow the data to more recent dates)
 
-**How many features (columns) are in the data?**
+_How many features (columns) are in the data?_
 
 Number of columns in the data: 13 to 953
 
-**What questions (from above) can be answered using the data in this dataset?**
+_What questions (from above) can be answered using the data in this dataset?_
 
 We can answer questions about how location, health, and socioeconomic status are related.
+
+_**Data Set 3**_: 
+
+_How many observations (rows) are in your data?_
+
+Number of rows in the data: 
+
+_How many features (columns) are in the data?_
+
+Number of columns in the data: 
+
+_What questions (from above) can be answered using the data in this dataset?_
+
+[Insert answer here]
 
 
 

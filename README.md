@@ -47,21 +47,21 @@ Data Set 3: [Possible addition?](Include link here)
 
 **How was the data collected or generated?**
 
-_Data Set 1_: The fast food location data came from Datafiniti. They are a web data company that gather a lot of information from several websites and created a database for each category. This specific data set was last updated in 2018. It has information about locations of fast food restaurants nationally (in the U.S.). 
+_**Data Set 1**_: The fast food location data came from Datafiniti. They are a web data company that gather a lot of information from several websites and created a database for each category. This specific data set was last updated in 2018. It has information about locations of fast food restaurants nationally (in the U.S.). 
 
-**How many observations (rows) are in your data?**
+_How many observations (rows) are in your data?_
 
 Number of rows in the data: 9242 
 
-**How many features (columns) are in the data?**
+_How many features (columns) are in the data?_
 
 Number of columns in the data: 15  
 
-**What questions (from above) can be answered using the data in this dataset?**
+_What questions (from above) can be answered using the data in this dataset?_
 
 Looking at this data, we can answer questions regarding specific places within the U.S. that have more fast food locations (availability) than others. We can also look at which fast food chains are more prevalent in certain areas than others. 
 
-_Data Set 2_: This data originally came from the National Health and Nutrition Examination Survey which is part of the Center for Disease Control and Prevention. It is a program that began in the early 1960s that surveys a nationally representative of 5,000 people. It contains demographic, socioeconomic, dietary, and other relevant health related information that is a survey. There is also an examination portion in which these individuals undergo a medical examination and lab tests by trained medical professionals. It is organized as a collection of excel files.
+_**Data Set 2**_: This data originally came from the National Health and Nutrition Examination Survey which is part of the Center for Disease Control and Prevention. It is a program that began in the early 1960s that surveys a nationally representative of 5,000 people. It contains demographic, socioeconomic, dietary, and other relevant health related information that is a survey. There is also an examination portion in which these individuals undergo a medical examination and lab tests by trained medical professionals. It is organized as a collection of excel files.
 
 **How many observations (rows) are in your data?**
 

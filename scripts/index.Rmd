@@ -36,13 +36,15 @@ The map above is a representation of the fast food chain distribution across the
 
 Here, in the United States, there is an abundance of fast food chains. Looking at a sample from the top 10,000 eateries across the country, we get an understanding of how wide spread they are, how popular they are, and where the highest number of them may be concentrated. 
 
+According to our data, [summary info with integrated calculated values]
+
 ## Total Number of Fast Food Restaurants per State
 ```{r echo=FALSE, warning=FALSE}
 
 bar_chart
 
 ```
-The bar chart above helps us understand the distribution of fast food restaurants across the U.S. It displays the total number of restaurants according to the state. 
+The bar chart above helps us understand the distribution of fast food restaurants across the U.S. It displays the total number of restaurants according to the state.  
 
 ## Insert Summary Table Name 
 ```{r echo=FALSE, warning=FALSE}

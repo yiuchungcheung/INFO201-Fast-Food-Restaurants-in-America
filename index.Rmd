@@ -1,0 +1,46 @@
+---
+title: "Nutrition and Health Report"
+author: "Anousha Shadrach, Midori Komi, Shruti Kompella, Jacky Cheung"
+date: "2/29/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+
+library(knitr)
+source("scripts/firstchart.R")
+source("scripts/secondchart.R")
+source("scripts/thirdchart.R")
+source("scripts/summarycalc.R")
+source("scripts/summarytable.R")
+
+```
+
+
+## Map of Fast Food Distribution (USA) 
+
+```{r echo=FALSE, warning=FALSE}
+
+
+map
+
+
+```
+The map above is a representation of the fast food chain distribution across the country. If you click on specific areas (blue dots), you recieve information on the name, location, and type (category) of each restaurant.  
+
+## Information on Fast Food Chains 
+
+Here, in the United States, there is an abundance of fast food chains. Looking at a sample from the top 10,000 eateries across the country, we get an understanding of how wide spread they are, some of the most popular places 
+
+
+```{r echo=FALSE, warning=FALSE}
+
+bar_chart
+
+```
+
+

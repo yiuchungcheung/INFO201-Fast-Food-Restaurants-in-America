@@ -27,7 +27,7 @@ source("scripts/summarytable.R")
 ```{r echo=FALSE, warning=FALSE}
 
 
-map
+first_chart(data)
 
 
 ```
@@ -42,7 +42,7 @@ According to our data, [summary info with integrated calculated values]
 ## Total Number of Fast Food Restaurants per State
 ```{r echo=FALSE, warning=FALSE}
 
-bar_chart 
+second_chart(data)
 
 ```
 The bar chart above helps us understand (at an individual level) the distribution of fast food places across the U.S.. It displays the total number of restaurants according to the state. As shown by the data, Ohio is the state with the most concentrated number of fast food chains. On the contrary, Connecticut and New Jersey look to have the least amount of them.

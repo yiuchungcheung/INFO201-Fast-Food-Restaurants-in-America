@@ -6,8 +6,9 @@ library(leaflet)
 library(ggplot2)
 library(plotly)
 
-data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv", stringsAsFactors = FALSE)
+# data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv", stringsAsFactors = FALSE)
 
+first_chart <- function(data) {
 # interactive map 
 map <- leaflet(data = data) %>%
   addTiles() %>%
@@ -23,4 +24,6 @@ map <- leaflet(data = data) %>%
       "Category:", data$categories, "<br>"
     )
   )
+return(map)
+}
 

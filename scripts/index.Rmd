@@ -1,6 +1,6 @@
 ---
 title: "U.S. Fast Food Distribution Report"
-author: "Anousha Shadrach, Midori Komi, Shruti Kompella, Jacky Cheung"
+author: "Anousha Shadrach, Midori Komi, Shruti Kompella, Yiu Chung Cheung"
 date: "2/29/2020"
 output: html_document
 ---

@@ -4,8 +4,8 @@ get_summary_info <- function(data) {
   #values
   tot_rest <- nrow(data)
   
-  tot_mcd <-data %>%
-    filter(name == "McDonald's") %>%
+  tot_mcd <- data %>%
+    filter(name == "McDonald's" | name == "McDonalds") %>%
     nrow()
   
   top_cities <- data %>%
@@ -23,7 +23,7 @@ get_summary_info <- function(data) {
   avg_each_state <- nrow(data)/47
   
   top_3_restaurants <- data %>%
-    group_by(name) %>%
+    group_by(name = tolower(name)) %>%
     summarise(num_rest = n()) %>%
     top_n(3, wt = num_rest) %>%
     pull(name)

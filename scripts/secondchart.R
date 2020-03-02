@@ -11,6 +11,8 @@ library(plotly)
 data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv", 
                  stringsAsFactors = FALSE)
 
+second_chart <- function(data) {
+
 
 total_fast_food_chains <- data %>%
   group_by(province) %>%
@@ -23,4 +25,8 @@ bar_chart <- ggplot(data = total_fast_food_chains) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 5))
 
 bar_chart <- ggplotly(bar_chart)
+
+return(bar_chart)
+
+}
 

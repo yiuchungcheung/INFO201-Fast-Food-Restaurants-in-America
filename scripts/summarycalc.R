@@ -36,6 +36,4 @@ get_summary_info <- function(data) {
   ret$avg_state <- avg_each_state
   
   return(ret)
-  
-  #return (list(tot_rest, avg_each_state, top_states, top_cities, top_3_restaurants))
 } 

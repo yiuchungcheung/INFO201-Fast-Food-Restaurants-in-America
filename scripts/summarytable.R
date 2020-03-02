@@ -14,10 +14,15 @@ by_state <- data %>%
   select(province, n_fast_food)
 
 by_mcd <- data %>%
-  filter(name == "McDonald's") %>%
+  filter(name == "McDonald's" || name == "McDonalds") %>%
   group_by(province) %>%
   summarise(num_mcd = n()) %>%
   select(province, num_mcd)
+
+by_state_r <- data %>%
+  group_by(province) %>%
+  summarise(n_fast_food = n(), num_mcd = n(name == "McDonald's")) %>%
+  select(province, n_fast_food, num_mcd)
 
 most_pop_rest <- data %>%
   group_by(name) %>%

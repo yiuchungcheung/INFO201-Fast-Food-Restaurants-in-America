@@ -1,6 +1,6 @@
 ---
-title: "Nutrition and Health Report"
-author: "Anousha Shadrach"
+title: "U.S. Fast Food Distribution Report"
+author: "Anousha Shadrach, Midori Komi, Shruti Kompella, Jacky Cheung"
 date: "2/29/2020"
 output: html_document
 ---
@@ -9,3 +9,56 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+
+library(knitr)
+#System struggling with first chart- debug later
+source("scripts/firstchart.R")
+source("scripts/secondchart.R")
+source("scripts/thirdchart.R")
+source("scripts/summarycalc.R")
+source("scripts/summarytable.R")
+
+```
+
+
+## Map of Fast Food Distribution (USA) 
+
+```{r echo=FALSE, warning=FALSE}
+
+
+map
+
+
+```
+The map above is a visual representation of the fast food chain distribution across the country. If you click on specific areas (blue dots), you recieve information on the name, location, and type (category) of each restaurant. As displayed by the data, fast food resturants are more centralized on the East Coast. Hwoever, on the West Coast, these chains are much more wide spread. 
+
+## Information on Fast Food Chains (Summary)
+
+Here, in the United States, there is an abundance of fast food chains. Looking at a sample from the top 10,000 eateries across the country, we get an understanding of how wide spread they are, how popular they are, and where the highest number of them may be concentrated. 
+
+According to our data, [summary info with integrated calculated values]
+
+## Total Number of Fast Food Restaurants per State
+```{r echo=FALSE, warning=FALSE}
+
+bar_chart 
+
+```
+The bar chart above helps us understand (at an individual level) the distribution of fast food places across the U.S.. It displays the total number of restaurants according to the state. As shown by the data, Ohio is the state with the most concentrated number of fast food chains. On the contrary, Connecticut and New Jersey look to have the least amount of them.
+
+## Insert Summary Table Name 
+#```{r echo=FALSE, warning=FALSE}
+
+#kable(name_of_table,
+#row.names=FALSE
+#col.names= c("", ""))
+
+#```
+Above shows summarised information regarding [insert rest of description] - [Pertinent info]
+
+## Number of Fast Food Locations by State (Similar to other?)
+#```{r}
+
+#```
+The [type of] chart above [insert description and pertinent info]

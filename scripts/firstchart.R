@@ -23,3 +23,4 @@ map <- leaflet(data = data) %>%
       "Category:", data$categories, "<br>"
     )
   )
+

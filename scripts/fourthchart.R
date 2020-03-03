@@ -54,7 +54,7 @@ bar_chart <- bar_chart %>% layout(title = 'Top Ten Fast Food Restaurants',
 
 
 
-bar_chart <- ggplotly(bar_chart)
+# bar_chart <- ggplotly(bar_chart)
 
 return(bar_chart)
 

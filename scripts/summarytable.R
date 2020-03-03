@@ -12,7 +12,7 @@ summary_table <- function(data) {
     group_by(province) %>%
     summarise(n_fast_food = n(), n_mcd = sum(isMcD)) %>%
     select(province, n_fast_food, n_mcd)
-  
+
   state_fast_food_places <- as.data.frame(by_state)
-  return (state_fast_food_places)
+  return(state_fast_food_places)
 }

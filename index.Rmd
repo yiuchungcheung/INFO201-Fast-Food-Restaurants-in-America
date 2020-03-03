@@ -41,11 +41,13 @@ second_chart(data)
 The bar chart above helps us understand (at an individual level) the distribution of fast food places across the U.S.. It displays the total number of restaurants according to the state. As shown by the data, Ohio is the state with the most concentrated number of fast food chains. On the contrary, Connecticut and New Jersey look to have the least amount of them.
 
 ## Insert Summary Table Name 
-#```{r echo=FALSE, warning=FALSE}
+
+```{r echo=FALSE, warning=FALSE}
 #kable(name_of_table,
 #row.names=FALSE
 #col.names= c("", ""))
-#```
+```
+
 Above shows summarised information regarding [insert rest of description] - [Pertinent info]
 
 

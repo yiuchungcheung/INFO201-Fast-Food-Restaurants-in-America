@@ -10,7 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
-
 library(knitr)
 #System struggling with first chart- debug later
 source("scripts/firstchart.R")
@@ -18,18 +17,13 @@ source("scripts/secondchart.R")
 source("scripts/thirdchart.R")
 source("scripts/summarycalc.R")
 source("scripts/summarytable.R")
-
 ```
 
 
 ## Map of Fast Food Distribution (USA) 
 
 ```{r echo=FALSE, warning=FALSE}
-
-
 first_chart(data)
-
-
 ```
 The map above is a visual representation of the fast food chain distribution across the country. If you click on specific areas (blue dots), you recieve information on the name, location, and type (category) of each restaurant. As displayed by the data, fast food resturants are more centralized on the East Coast. Hwoever, on the West Coast, these chains are much more wide spread. 
 
@@ -41,24 +35,19 @@ According to our data, [summary info with integrated calculated values]
 
 ## Total Number of Fast Food Restaurants per State
 ```{r echo=FALSE, warning=FALSE}
-
 second_chart(data)
-
 ```
 The bar chart above helps us understand (at an individual level) the distribution of fast food places across the U.S.. It displays the total number of restaurants according to the state. As shown by the data, Ohio is the state with the most concentrated number of fast food chains. On the contrary, Connecticut and New Jersey look to have the least amount of them.
 
 ## Insert Summary Table Name 
 #```{r echo=FALSE, warning=FALSE}
-
 #kable(name_of_table,
 #row.names=FALSE
 #col.names= c("", ""))
-
 #```
 Above shows summarised information regarding [insert rest of description] - [Pertinent info]
 
 ## Number of Fast Food Locations by State (Similar to other?)
 #```{r}
-
 #```
 The [type of] chart above [insert description and pertinent info]

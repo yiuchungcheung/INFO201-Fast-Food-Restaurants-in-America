@@ -7,8 +7,10 @@ library(ggplot2)
 library(plotly)
 library(gridExtra)
 
-data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv",
-                 stringsAsFactors = FALSE)
+#data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv",
+#                 stringsAsFactors = FALSE)
+
+fourth_chart <- function(data) {
 
 # bar chart - grouped by 
 num_per_name_df <- data %>%
@@ -26,4 +28,7 @@ bar_chart <- ggplot(data = num_per_name_df) +
 
 bar_chart <- ggplotly(bar_chart)
 
+return(bar_chart)
+
+}
 

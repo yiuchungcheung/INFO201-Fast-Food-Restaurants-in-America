@@ -50,7 +50,7 @@ col.names= c("State", "Total Fast Food Restaurants", "Total Number of Mcdonald's
 
 ```
 
-Above shows summarised information regarding a fan favourite across the United States, McDonald's. Being a well-known, household name, we wanted to understand how McDonald's compared (in terms of total locations) to their other competitors of each state.The table displays all states, their fast food chain total, number of Mcdonalds', and the ratio of Mcdonald's to the total fast food chains. As shown by the data, Mississippi has the highest ratio of Mcdonalds' to their leading competitors in the whole country. Comparatively, New Jersey, Massachusetts, and Connecticut are tied for not having any Mcdonald's in their state(as given within the sample).
+Above shows summarised information regarding a fan favourite across the United States, McDonald's. Being a well-known, household name, we wanted to understand how McDonald's compared (in terms of total locations) to their other competitors of each state.The table displays all states, their fast food chain total, total number of Mcdonalds', and the ratio of Mcdonald's to the total fast food chains. As shown by the data, Mississippi has the highest ratio of Mcdonalds' to their leading competitors in the whole country at 20% of their fast food chains being MCD. Comparatively, New Jersey, Massachusetts, and Connecticut are tied for not having any Mcdonald's in their state(as given within the sample).
 
 
 ## Top Ten Fast Food Chains of America 

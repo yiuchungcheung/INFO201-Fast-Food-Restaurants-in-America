@@ -7,8 +7,8 @@ library(ggplot2)
 library(plotly)
 library(gridExtra)
 
-#data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv",
-#                 stringsAsFactors = FALSE)
+data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv",
+                 stringsAsFactors = FALSE)
 
 fourth_chart <- function(data) {
 
@@ -38,7 +38,7 @@ num_per_name_df <- data %>%
   # theme(legend.position="none")
 
 # referenced from this site : https://plot.ly/r/pie-charts/
-bar_chart <- plot_ly(data = num_per_name_df, labels = ~name, values = ~count, type = 'pie',
+pie_chart <- plot_ly(data = num_per_name_df, labels = ~name, values = ~count, type = 'pie',
                textposition = 'inside',
                textinfo = 'label+percent',
                insidetextfont = list(color = '#FFFFFF'),
@@ -48,7 +48,7 @@ bar_chart <- plot_ly(data = num_per_name_df, labels = ~name, values = ~count, ty
                              line = list(color = '#FFFFFF', width = 1)),
                showlegend = FALSE)
 
-bar_chart <- bar_chart %>% layout(title = 'Top Ten Fast Food Restaurants',
+pie_chart <- pie_chart %>% layout(title = 'Top Ten Fast Food Restaurants',
                                   xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE), 
                                   yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE))
 
@@ -56,7 +56,7 @@ bar_chart <- bar_chart %>% layout(title = 'Top Ten Fast Food Restaurants',
 
 # bar_chart <- ggplotly(bar_chart)
 
-return(bar_chart)
+return(pie_chart)
 
 }
 

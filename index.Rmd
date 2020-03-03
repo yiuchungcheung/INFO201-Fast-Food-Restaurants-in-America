@@ -15,6 +15,7 @@ library(knitr)
 source("scripts/firstchart.R")
 source("scripts/secondchart.R")
 source("scripts/thirdchart.R")
+source("scripts/fourthchart.R")
 source("scripts/summarycalc.R")
 source("scripts/summarytable.R")
 ```
@@ -51,3 +52,7 @@ Above shows summarised information regarding [insert rest of description] - [Per
 #```{r}
 #```
 The [type of] chart above [insert description and pertinent info]
+## TESTING
+```{r echo=FALSE, warning=FALSE}
+fourth_chart(data)
+```

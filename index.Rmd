@@ -11,7 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 library(knitr)
-#System struggling with first chart- debug later
 source("scripts/firstchart.R")
 source("scripts/secondchart.R")
 source("scripts/thirdchart.R")
@@ -26,13 +25,15 @@ source("scripts/summarytable.R")
 ```{r echo=FALSE, warning=FALSE}
 first_chart(data)
 ```
-The map above is a visual representation of the fast food chain distribution across the country. If you click on specific areas (blue dots), you recieve information on the name, location, and type (category) of each restaurant. As displayed by the data, fast food resturants are more centralized on the East Coast. Hwoever, on the West Coast, these chains are much more wide spread. 
+The map above is a visual representation of the fast food chain distribution across the country. If you click on specific areas (blue dots), you recieve information on the name, location, and type (category) of each restaurant. As displayed by the data, fast food resturants are more centralized on the East Coast. However, on the West Coast, they are much more wide spread. 
 
 ## Information on Fast Food Chains (Summary)
 
-Here, in the United States, there is an abundance of fast food chains. Looking at a sample from the top 10,000 eateries across the country, we get an understanding of how wide spread they are, how popular they are, and where the highest number of them may be concentrated. 
+Here, in the United States, there is an abundance of fast food chains. Looking at a sample from the top `r get_summary_info(data)$tot_rest` eateries across the country, we get an understanding of how wide spread they are, how popular they are (measured on the basis of the total number of restaurants), and where the highest number of them may be concentrated. 
 
-According to our data, [summary info with integrated calculated values]
+If we take a look at the data, holistically, the average number of restaurants per state is `r get_summary_info(data)$avg_state`. However, certain states dominant more than others. The states that are most popular for fast food establishments have been `r get_summary_info(data)$top_states` (as abbreviated). In this, we measure popularity on the basis of number of restuarants. If you were to look more specifically into the U.S., on a city level, the top places for fast food are `r get_summary_info(data)$top_cities`.
+This gives us a geographic understanding of the fast food resturants spread. But what are the names of the actual resturants that have the most influence in country? The data suggests that `r get_summary_info(data)$top_r` (in ascending order) are the most popular. The top restaurant: `r get_summary_info(data)$top_r[1]`, having a grand total of `r get_summary_info(data)$tot_subway` locations. 
+
 
 ## Total Number of Fast Food Restaurants per State
 ```{r echo=FALSE, warning=FALSE}
@@ -48,12 +49,12 @@ The bar chart above helps us understand (at an individual level) the distributio
 #```
 Above shows summarised information regarding [insert rest of description] - [Pertinent info]
 
-## Number of Fast Food Locations by State (Similar to other?)
-#```{r}
-#```
-The [type of] chart above [insert description and pertinent info]
-## TESTING
+
+## Top Ten Fast Food Chains of America 
 ```{r echo=FALSE, warning=FALSE}
 
 fourth_chart(data)
+
 ```
+
+The pie chart above shows the top 10 fast food chain restaurants (by name). It's colourful appearance allows us to differentiate the difference (in percentage) between these most wide spread eateries. As mentioned in the summary, Subway is the most popular fast food restaurant. As seen here, it is 9.1% more wide spread than Mcdonald's and 14% more wide spread than Taco Bell, its closest competitors. 

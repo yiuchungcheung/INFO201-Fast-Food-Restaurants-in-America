@@ -4,8 +4,8 @@ get_summary_info <- function(data) {
   #values
   tot_rest <- nrow(data)
   
-  tot_mcd <- data %>%
-    filter(name == "McDonald's" | name == "McDonalds") %>%
+  tot_subway <- data %>%
+    filter(name == "SUBWAY" | name == "Subway") %>%
     nrow()
   
   top_cities <- data %>%
@@ -28,7 +28,7 @@ get_summary_info <- function(data) {
     top_n(3, wt = num_rest) %>%
     pull(name)
   
-  ret$tot_mcd <- tot_mcd
+  ret$tot_subway <- tot_subway
   ret$tot_rest <- tot_rest
   ret$top_cities <- top_cities
   ret$top_states <- top_states

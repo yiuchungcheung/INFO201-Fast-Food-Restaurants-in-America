@@ -13,16 +13,4 @@ by_state <- data %>%
   summarise(n_fast_food = n()) %>%
   select(province, n_fast_food)
 
-by_mcd <- data %>%
-  filter(name == "McDonald's" || name == "McDonalds") %>%
-  group_by(province) %>%
-  summarise(num_mcd = n()) %>%
-  select(province, num_mcd)
-
-most_pop_rest <- data %>%
-  group_by(name) %>%
-  summarise(num_rest = n()) %>%
-  top_n(3, wt = num_rest) %>%
-  select(name)
-
 state_fast_food_places <- as.data.frame(by_state)

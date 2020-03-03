@@ -6,6 +6,9 @@ library(leaflet)
 library(ggplot2)
 library(plotly)
 
+data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv",
+  stringsAsFactors = FALSE)
+
 summary_table <- function(data) {
   by_state <- data %>%
     mutate(isMcD = ifelse(name == "McDonald's" |

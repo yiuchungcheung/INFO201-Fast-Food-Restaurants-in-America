@@ -42,15 +42,35 @@ num_per_name_df$name[num_per_name_df$name == num_per_name_not_top_10_df$sum] <- 
 num_per_name_df <- num_per_name_df %>%
   arrange(desc(count))
 
+
+
+
 # create the bar chart
-bar_chart <- ggplot(data = num_per_name_df) +
-  geom_col(mapping = aes(x = name, y = count)) +
-  ggtitle("Top Ten Fast Food Restaurants") +
-  labs(x = "Name", y ="Number of Restaurants") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 5))
+#bar_chart <- ggplot(data = num_per_name_df) +
+#  geom_col(mapping = aes(x = name, y = count)) +
+#  ggtitle("Top Ten Fast Food Restaurants") +
+#  labs(x = "Name", y ="Number of Restaurants") +
+#  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 5))
 
-bar_chart <- ggplotly(bar_chart)
+#bar_chart <- ggplotly(bar_chart)
 
-return(bar_chart)
+# referenced from this site : https://plot.ly/r/pie-charts/
+pie_chart <- plot_ly(data = num_per_name_df, labels = ~name, values = ~count, type = 'pie',
+                     textposition = 'inside',
+                     textinfo = 'label+percent',
+                     insidetextfont = list(color = '#FFFFFF'),
+                     hoverinfo = 'text',
+                     text = ~paste(count, ' stores'),
+                     marker = list(colors = colors,
+                                   line = list(color = '#FFFFFF', width = 1)),
+                     showlegend = FALSE)
+
+pie_chart <- pie_chart %>% layout(title = 'Top Ten Fast Food Restaurants',
+                                  xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE), 
+                                  yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE))
+
+
+
+return(pie_chart)
 
 }

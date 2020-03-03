@@ -26,6 +26,11 @@ bar_chart <- ggplot(data = num_per_name_df) +
   labs(x = "Name", y ="Number of Restaurants") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 5))
 
+# create a pie chart
+bar_chart <- ggplot(data = num_per_name_df, aes(x="", y=count, fill = name)) +
+  geom_bar(stat="identity", width=1, color="white") +
+  coord_polar("y", start=0)
+
 bar_chart <- ggplotly(bar_chart)
 
 return(bar_chart)

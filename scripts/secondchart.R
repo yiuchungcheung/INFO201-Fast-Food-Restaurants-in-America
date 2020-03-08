@@ -22,7 +22,7 @@ second_chart <- function(data) {
     labs(x = "State (Abr.)", y = "Total Number of Restaurants") +
     theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 5))
 
-  bar_chart <- ggplotly(bar_chart)
+  #bar_chart <- ggplotly(bar_chart)
 
   return(bar_chart)
 }

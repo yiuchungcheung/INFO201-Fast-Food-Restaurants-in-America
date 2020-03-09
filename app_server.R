@@ -24,8 +24,8 @@ server <- function(input, output) {
 
   # -----------------Visualization 2 --------------------
 
-  output$second_chart <- renderPlot({
-    return(second_chart(data))
+  output$second_chart <- renderPlotly({
+    return(second_new_chart(data, input$number, input$colour_bar))
   })
 
 

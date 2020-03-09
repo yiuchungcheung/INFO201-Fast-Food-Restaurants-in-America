@@ -46,3 +46,5 @@ fourth_chart <- function(data) {
 
   return(pie_chart)
 }
+
+fourth_chart(data)

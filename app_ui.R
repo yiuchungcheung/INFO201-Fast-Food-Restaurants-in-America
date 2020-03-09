@@ -5,8 +5,8 @@ tab_1 <- sidebarLayout(
   mainPanel()
 )
 
-# map
-tab_2 <- sidebarLayout(
+# Map of most popular fast food places
+map_panel <- sidebarLayout(
   sidebarPanel(
     selectInput(
       inputId = "map_variable",
@@ -24,13 +24,22 @@ tab_2 <- sidebarLayout(
     leafletOutput("first_chart")
   )
 )
-tab_3 <- sidebarLayout(
-  sidebarPanel(
+# Bar graph of States with most fast food places 
+# Numbers are not in data set so it doesn't work 
+
+bar_graph_panel <- sidebarLayout(
+sidebarPanel(
+  selectInput(
+    inputId = "number",
+    label = "Top Number of States",
+    choices = list("Top 5" = 5, "Top 10" = 10,
+                   "Top 15" = 15)
+    
+  ),
     radioButtons(
-      inputId = "vis_2",
-      label = h3("Pick a color or something- change this"),
-      choices = list("Grey" = "grey", "Red" = "red"),
-      selected = "grey"
+      inputId = "colour_bar",
+      label = h3("Change Bar Colour"),
+      choices = list("Pink" = "pink", "Yellow" = "yellow"),
     )
   ),
   mainPanel(
@@ -38,7 +47,8 @@ tab_3 <- sidebarLayout(
   )
 )
 
-tab_4 <- sidebarLayout(
+# Pie chart of top chains (percentage breakdown)
+pie_chart_panel <- sidebarLayout(
   sidebarPanel(
     radioButtons(
       inputId = "vis_3",
@@ -59,25 +69,25 @@ tab_4 <- sidebarLayout(
 )
 
 ui <- navbarPage(
-  "Fast Food",
-  tabPanel(
+  "U.S. Fast Food Distribution",
+   tabPanel(
     "TAB 1",
-    titlePanel("This is the Main Page"),
+    titlePanel("Insert Info"),
     tab_1
   ),
   tabPanel(
-    "TAB 2",
-    titlePanel("Visualization 1"),
-    tab_2
+    "Geographic Map Analysis",
+    titlePanel("Map of Most Widespread Food Chains"),
+    map_panel
   ),
   tabPanel(
-    "TAB 3",
+    "Bar Graph Analysis",
     titlePanel("Visualization 2"),
-    tab_3
+    bar_graph_panel
   ),
   tabPanel(
-    "TAB 4",
+    "Pie Chart Analysis",
     titlePanel("Visualization 3"),
-    tab_4
+    pie_chart_panel
   )
 )

@@ -1,6 +1,11 @@
 library("shiny")
-library("ggplot2")
-library("plotly")
+library(dplyr)
+library(lintr)
+library(styler)
+library(tidyr)
+library(leaflet)
+library(ggplot2)
+library(plotly)
 
 source("app_ui.R")
 source("app_server.R")

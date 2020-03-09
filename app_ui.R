@@ -21,7 +21,11 @@ map_panel <- sidebarLayout(
     )
   ),
   mainPanel(
-    leafletOutput("first_chart")
+    leafletOutput("first_chart"),
+    HTML("<p>Insignt or description of the graph here.</p>
+        <br>
+        <p> More insights here </p>"
+    )
   )
 )
 # Bar graph of States with most fast food places 
@@ -43,7 +47,11 @@ sidebarPanel(
     )
   ),
   mainPanel(
-    plotOutput(outputId = "second_chart")
+    plotOutput(outputId = "second_chart"),
+    HTML("<p>Insignt or description of the graph here.</p>
+        <br>
+        <p> More insights here </p>"
+    )
   )
 )
 
@@ -64,30 +72,38 @@ pie_chart_panel <- sidebarLayout(
     )
   ),
   mainPanel(
-    plotOutput(outputId = "third_chart")
+    plotOutput(outputId = "third_chart"),
+    HTML("<p>Insignt or description of the graph here.</p>
+        <br>
+        <p> More insights here </p>"
+    )
   )
 )
 
-ui <- navbarPage(
-  "U.S. Fast Food Distribution",
-   tabPanel(
-    "TAB 1",
-    titlePanel("Insert Info"),
-    tab_1
-  ),
-  tabPanel(
-    "Geographic Map Analysis",
-    titlePanel("Map of Most Widespread Food Chains"),
-    map_panel
-  ),
-  tabPanel(
-    "Bar Graph Analysis",
-    titlePanel("Visualization 2"),
-    bar_graph_panel
-  ),
-  tabPanel(
-    "Pie Chart Analysis",
-    titlePanel("Visualization 3"),
-    pie_chart_panel
+ui <- tagList(
+  tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),
+  navbarPage(
+    "U.S. Fast Food Distribution",
+    tabPanel(
+      "TAB 1",
+      titlePanel("Insert Info"),
+      tab_1
+    ),
+    tabPanel(
+      "Geographic Map Analysis",
+      titlePanel("Map of Most Widespread Food Chains"),
+      map_panel
+    ),
+    tabPanel(
+      "Bar Graph Analysis",
+      titlePanel("Visualization 2"),
+      bar_graph_panel
+    ),
+    tabPanel(
+      "Pie Chart Analysis",
+      titlePanel("Visualization 3"),
+      pie_chart_panel
+    )
   )
 )
+

@@ -1,10 +1,9 @@
 
 # Introductory panel (?)
 tab_1 <- 
-  sidebarLayout(
-  sidebarPanel(),
-  mainPanel()
-)
+  mainPanel(
+    includeHTML("intro_page.html")
+  )
 
 # Map of most popular fast food places
 map_panel <- sidebarLayout(
@@ -94,7 +93,6 @@ ui <- tagList(
     "U.S. Fast Food Distribution",
     tabPanel(
       "TAB 1",
-      titlePanel("Insert Info"),
       tab_1
     ),
     tabPanel(

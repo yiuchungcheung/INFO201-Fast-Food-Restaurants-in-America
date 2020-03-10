@@ -6,49 +6,23 @@ library(leaflet)
 library(ggplot2)
 library(plotly)
 
-data <- read.csv(
-  file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv",
-  stringsAsFactors = FALSE
-)
+first_chart <- function(input_data, variable, color) {
 
-# old first chart without interactions
-
-# first_chart <- function(data) {
-#   # interactive map
-#   map <- leaflet(data = data) %>%
-#     addTiles() %>%
-#     addCircleMarkers(
-#       lat = ~latitude,
-#       lng = ~longitude,
-#       radius = 0.005,
-#       popup = paste(
-#         "Name:", data$name, "<br>",
-#         "City:", data$city, "<br>",
-#         "Address:", data$address, "<br>",
-#         "State:", data$province, "<br>",
-#         "Category:", data$categories, "<br>"
-#       )
-#     )
-#   return(map)
-# }
-
-first_chart <- function(data, variable, color) {
-  new_name <- paste(variable)
-
-  new_data <- data %>%
-    group_by(name = tolower(name)) %>%
-    filter(name == variable)
+   new_data <- data %>%
+     group_by(name = tolower(name)) %>%
+     filter(name == variable)
 
   map <- leaflet(data = new_data) %>%
     addTiles() %>%
     addCircleMarkers(
-      lat = ~latitude,
-      lng = ~longitude,
+      lat = ~new_data$latitude,
+      lng = ~new_data$longitude,
       radius = 0.005,
       popup = paste(
-        "City:", data$city, "<br>",
-        "Address:", data$address, "<br>",
-        "State:", data$province, "<br>"
+        "Name:", new_data$name, "<br>",
+        "City:", new_data$city, "<br>",
+        "Address:", new_data$address, "<br>",
+        "State:", new_data$province, "<br>"
       ),
       color = ~color
     )

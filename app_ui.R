@@ -36,8 +36,8 @@ sidebarPanel(
   selectInput(
     inputId = "number",
     label = "Top Number of States",
-    choices = list("Top 5" = 5, "Top 10" = 10,
-                   "Top 15" = 15)
+    choices = list("Top 5" = 10, "Top 10" = 15,
+                   "Top 15" = 20)
     
   ),
     radioButtons(
@@ -49,7 +49,7 @@ sidebarPanel(
   ),
   mainPanel(
     h2("States with Top Number of Fast Food Chains", align = "center"),
-    plotOutput(outputId = "second_chart"),
+    plotlyOutput(outputId = "second_chart"),
     HTML("<p>Insignt or description of the graph here.</p>
         <br>
         <p> More insights here </p>"

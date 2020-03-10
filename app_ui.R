@@ -1,6 +1,7 @@
 
 # Introductory panel (?)
-tab_1 <- sidebarLayout(
+tab_1 <- 
+  sidebarLayout(
   sidebarPanel(),
   mainPanel()
 )
@@ -105,6 +106,8 @@ ui <- tagList(
     tabPanel(
       "Pie Chart Analysis",
       pie_chart_panel
+      
+      
     )
   )
 )

@@ -11,6 +11,7 @@ source("./scripts/secondchart.R")
 source("./scripts/fourthchart.R")
 
 server <- function(input, output) {
+  
   data <- read.csv(
     file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv",
     stringsAsFactors = FALSE

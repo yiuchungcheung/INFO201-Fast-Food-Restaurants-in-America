@@ -43,10 +43,12 @@ sidebarPanel(
     radioButtons(
       inputId = "colour_bar",
       label = h3("Change Bar Colour"),
-      choices = list("Pink" = "pink", "Yellow" = "yellow"),
+      choices = list("Pink" = "pink", "Blue" = "blue", 
+                     "Purple" = "purple"),
     )
   ),
   mainPanel(
+    h2("States with Top Number of Fast Food Chains", align = "center"),
     plotOutput(outputId = "second_chart"),
     HTML("<p>Insignt or description of the graph here.</p>
         <br>
@@ -96,7 +98,6 @@ ui <- tagList(
     ),
     tabPanel(
       "Bar Graph Analysis",
-      titlePanel("Visualization 2"),
       bar_graph_panel
     ),
     tabPanel(

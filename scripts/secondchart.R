@@ -5,7 +5,7 @@ library(tidyr)
 library(leaflet)
 library(ggplot2)
 library(plotly)
-
+library(stringr)
 
 
 data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv", stringsAsFactors = FALSE)
@@ -47,6 +47,8 @@ data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv", strin
 
 second_new_chart <- function(df, number, colour_bar) {
 
+  number <- as.numeric(as.character(number))
+  
   bar_graph <- df %>%
     group_by(province) %>%
     summarise(total_num_restaurants = n()) %>%
@@ -65,4 +67,4 @@ second_new_chart <- function(df, number, colour_bar) {
   return(bar_graph)
 }
 
-second_new_chart(data, 25, "pink")
+#second_new_chart(data, 25, "pink")

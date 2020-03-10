@@ -12,7 +12,8 @@ map_panel <- sidebarLayout(
     selectInput(
       inputId = "map_variable",
       label = "Top Fast Food Restaurants Map Distribution",
-      choices = list("Subway" = "subway", "Taco Bell" = "taco bell", "McDonald's" = "mcdonald's")
+      choices = list("Subway" = "subway", "Taco Bell" = "taco bell",
+                     "McDonald's" = "mcdonald's", "Wendy's" = "wendys")
     ),
     radioButtons(
       inputId = "vis_1",

@@ -1,5 +1,5 @@
 
-
+# Introductory panel (?)
 tab_1 <- sidebarLayout(
   sidebarPanel(),
   mainPanel()
@@ -21,6 +21,7 @@ map_panel <- sidebarLayout(
     )
   ),
   mainPanel(
+    h2("Map of Most Widespread Food Chains", align = "center"),
     leafletOutput("first_chart"),
     HTML("<p>Insignt or description of the graph here.</p>
         <br>
@@ -28,16 +29,15 @@ map_panel <- sidebarLayout(
     )
   )
 )
-# Bar graph of States with most fast food places 
-# Numbers are not in data set so it doesn't work 
+# Bar graph with top numbers of fast food locations 
 
 bar_graph_panel <- sidebarLayout(
 sidebarPanel(
   selectInput(
     inputId = "number",
     label = "Top Number of States",
-    choices = list("Top 5" = 10, "Top 10" = 15,
-                   "Top 15" = 20)
+    choices = list("Top 10" = 10, "Top 15" = 15,
+                   "Top 20" = 20)
     
   ),
     radioButtons(
@@ -50,7 +50,9 @@ sidebarPanel(
   mainPanel(
     h2("States with Top Number of Fast Food Chains", align = "center"),
     plotlyOutput(outputId = "second_chart"),
-    HTML("<p>Insignt or description of the graph here.</p>
+    HTML("<p>The bar graph above provides the (abbreviated) state names with the highest concentration of 
+          fast food chains within a Fast Food Distribution sample of 10,000 locations. The following is placed
+          in alphabetical order.</p>
         <br>
         <p> More insights here </p>"
     )
@@ -74,6 +76,7 @@ pie_chart_panel <- sidebarLayout(
     )
   ),
   mainPanel(
+    h2("[Insert Pie Chart Title Here]", align = "center"),
     plotOutput(outputId = "third_chart"),
     HTML("<p>Insignt or description of the graph here.</p>
         <br>
@@ -93,7 +96,6 @@ ui <- tagList(
     ),
     tabPanel(
       "Geographic Map Analysis",
-      titlePanel("Map of Most Widespread Food Chains"),
       map_panel
     ),
     tabPanel(
@@ -102,7 +104,6 @@ ui <- tagList(
     ),
     tabPanel(
       "Pie Chart Analysis",
-      titlePanel("Visualization 3"),
       pie_chart_panel
     )
   )

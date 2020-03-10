@@ -37,7 +37,7 @@ bar_graph_panel <- sidebarLayout(
 sidebarPanel(
   selectInput(
     inputId = "number",
-    label = "Top Number of States",
+    label = "Top States for Fast Food",
     choices = list("Top 10" = 10, "Top 15" = 15,
                    "Top 20" = 20)
     
@@ -52,11 +52,12 @@ sidebarPanel(
   mainPanel(
     h2("States with Top Number of Fast Food Chains", align = "center"),
     plotlyOutput(outputId = "second_chart"),
-    HTML("<p>The bar graph above provides the (abbreviated) state names with the highest concentration of 
+    HTML("<p><center><b>The bar graph above provides the (abbreviated) state names with the highest concentration of 
           fast food chains within a Fast Food Distribution sample of 10,000 locations. The following is placed
-          in alphabetical order.</p>
+          in alphabetical order.</b></center></p>
         <br>
-        <p> More insights here </p>"
+        <p> Ohio State has the highest number of fast food chains from this data. It has
+         a total of 922 locations. </p>"
     )
   )
 )

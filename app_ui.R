@@ -1,6 +1,6 @@
 
-# Introductory panel (?)
-tab_1 <- 
+# Introductory panel 
+intro_panel <- 
   mainPanel(
     includeHTML("intro_page.html")
   )
@@ -31,7 +31,6 @@ map_panel <- sidebarLayout(
   )
 )
 # Bar graph with top numbers of fast food locations 
-
 bar_graph_panel <- sidebarLayout(
 sidebarPanel(
   selectInput(
@@ -87,13 +86,17 @@ pie_chart_panel <- sidebarLayout(
   )
 )
 
+# Summary panel
+summary_panel <- 
+  mainPanel()
+
 ui <- tagList(
   tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),
   navbarPage(
     "U.S. Fast Food Distribution",
     tabPanel(
-      "TAB 1",
-      tab_1
+      "Introduction",
+      intro_panel
     ),
     tabPanel(
       "Geographic Map Analysis",
@@ -106,9 +109,11 @@ ui <- tagList(
     tabPanel(
       "Pie Chart Analysis",
       pie_chart_panel
-      
-      
+    ),
+    tabPanel(
+      "Project Summary",
+      summary_panel
+      )
     )
   )
-)
 

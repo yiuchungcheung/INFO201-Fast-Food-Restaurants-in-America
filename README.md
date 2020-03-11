@@ -1,8 +1,8 @@
 # Final Project
 
-link to website: https://info201b-wi20.github.io/final-project-kshruti99
+link to website (midpoint): https://info201b-wi20.github.io/final-project-kshruti99
 
-[Shiny.io website link](https://midori.shinyapps.io/final-project-kshruti99/)
+[Shiny.io website link: Final Project](https://anshady.shinyapps.io/final-project-kshruti99/)
 
 **Why are interested in this field/domain?**
 

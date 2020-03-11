@@ -5,14 +5,6 @@
 intro_panel <- 
   mainPanel(
     includeHTML("intro_page.html"),
-    # h1("United State's Fast Food Distribution Project", align = "center"),
-    # #img(src = "Cartoon_fast_food"),
-    # h3("Topic Inspiration"),
-    # HTML("<p> Info</p>
-    #     <br>
-    #     <p>Info</p>"
-         
-    # )
   )
 
 # Map of most popular fast food places

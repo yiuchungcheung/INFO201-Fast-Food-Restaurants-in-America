@@ -12,7 +12,6 @@ source("./scripts/fourthchart.R")
 source("./scripts/thirdchart.R")
 
 server <- function(input, output) {
-  
   data <- read.csv(
     file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv",
     stringsAsFactors = FALSE
@@ -34,7 +33,7 @@ server <- function(input, output) {
   # -------------------Visualization 3 ------------------
 
   output$third_chart <- renderPlotly({
-    if(input$show_other) {
+    if (input$show_other) {
       return(third_chart(data, input$top_restaurants))
     }
     return(fourth_chart(data, input$top_restaurants))

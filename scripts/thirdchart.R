@@ -10,13 +10,15 @@ library(gridExtra)
 # data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv",
 #                 stringsAsFactors = FALSE)
 
-third_chart <- function(data) {
+third_chart <- function(data, top_n_rest) {
 
+  top_n_rest <- as.numeric(top_n_rest)
+  
   # bar chart - grouped by
   num_per_name_df <- data %>%
     group_by(name = tolower(name)) %>%
     summarize(count = n()) %>%
-    top_n(10, count) %>%
+    top_n(top_n_rest, count) %>%
     arrange(desc(count))
 
   # df without the rop 10
@@ -61,7 +63,7 @@ third_chart <- function(data) {
   )
 
   pie_chart <- pie_chart %>% layout(
-    title = "Top Ten Fast Food Restaurants",
+    title = "Top Fast Food Restaurants",
     xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE),
     yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE)
   )

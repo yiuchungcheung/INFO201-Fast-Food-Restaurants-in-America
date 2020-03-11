@@ -9,6 +9,7 @@ library(plotly)
 source("./scripts/firstchart.R")
 source("./scripts/secondchart.R")
 source("./scripts/fourthchart.R")
+source("./scripts/thirdchart.R")
 
 server <- function(input, output) {
   
@@ -17,7 +18,7 @@ server <- function(input, output) {
     stringsAsFactors = FALSE
   )
 
-  # ----------------- Visualization  --------------------
+  # ----------------- Visualization 1 --------------------
   output$first_chart <- renderLeaflet({
     return(first_chart(data, input$map_variable, input$vis_1))
   })
@@ -33,6 +34,9 @@ server <- function(input, output) {
   # -------------------Visualization 3 ------------------
 
   output$third_chart <- renderPlotly({
-    return(fourth_chart(data))
+    if(input$show_other) {
+      return(third_chart(data, input$top_restaurants))
+    }
+    return(fourth_chart(data, input$top_restaurants))
   })
 }

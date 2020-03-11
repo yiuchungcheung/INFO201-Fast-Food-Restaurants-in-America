@@ -12,13 +12,15 @@ data <- read.csv(
   stringsAsFactors = FALSE
 )
 
-fourth_chart <- function(data) {
+fourth_chart <- function(data, top_n_rest) {
 
+  top_n_rest <- as.numeric(top_n_rest)
+  
   # bar chart - grouped by
   num_per_name_df <- data %>%
     group_by(name = tolower(name)) %>%
     summarize(count = n()) %>%
-    top_n(10, count) %>%
+    top_n(top_n_rest, count) %>%
     arrange(desc(count))
 
 
@@ -39,12 +41,10 @@ fourth_chart <- function(data) {
   )
 
   pie_chart <- pie_chart %>% layout(
-    title = "Top Ten Fast Food Restaurants",
+    title = "Top Fast Food Restaurants",
     xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE),
     yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE)
   )
 
   return(pie_chart)
 }
-
-fourth_chart(data)

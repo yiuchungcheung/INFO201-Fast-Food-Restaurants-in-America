@@ -66,24 +66,26 @@ sidebarPanel(
 pie_chart_panel <- sidebarLayout(
   sidebarPanel(
     radioButtons(
-      inputId = "vis_3",
-      label = h3("Pick a color or something- change this"),
-      choices = list("Grey" = "grey", "Red" = "red"),
-      selected = "grey"
+      inputId = "top_restaurants",
+      label = h3("Top Restaurants"),
+      choices = list("Top 5" = 5, "Top 10" = 10,
+                     "Top 15" = 15),
     ),
-    radioButtons(
-      inputId = "vis_3_data",
-      label = h3("Change another aspect"),
-      choices = list("Grey" = "grey", "Red" = "red"),
-      selected = "grey"
+    checkboxInput(
+      inputId = "show_other",
+      label = "Show other?",
+      value = FALSE
     )
   ),
   mainPanel(
-    h2("[Insert Pie Chart Title Here]", align = "center"),
-    plotOutput(outputId = "third_chart"),
-    HTML("<p>Insignt or description of the graph here.</p>
+    h2("Top Restaurants Pie Chart", align = "center"),
+    plotlyOutput(outputId = "third_chart"),
+    HTML("<p><center><b>The pie graph above provides the (abbreviated) state names with the highest concentration of 
+          fast food chains within a Fast Food Distribution sample of 10,000 locations. The following is placed
+          in alphabetical order.</b></center></p>
         <br>
-        <p> More insights here </p>"
+        <p> Ohio State has the highest number of fast food chains from this data. It has
+         a total of 922 locations. </p>"
     )
   )
 )

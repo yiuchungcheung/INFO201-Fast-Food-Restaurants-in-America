@@ -62,8 +62,10 @@ third_chart <- function(data, top_n_rest) {
     showlegend = FALSE
   )
 
+  top_title <- paste0("Top ", top_n_rest, " Fast Food Restaurants")
+  
   pie_chart <- pie_chart %>% layout(
-    title = "Top Fast Food Restaurants",
+    title = top_title,
     xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE),
     yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklables = FALSE)
   )

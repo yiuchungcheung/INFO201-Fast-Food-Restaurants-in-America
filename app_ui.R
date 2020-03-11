@@ -80,19 +80,22 @@ pie_chart_panel <- sidebarLayout(
   mainPanel(
     h2("Top Restaurants Pie Chart", align = "center"),
     plotlyOutput(outputId = "third_chart"),
-    HTML("<p><center><b>The pie graph above provides the (abbreviated) state names with the highest concentration of 
-          fast food chains within a Fast Food Distribution sample of 10,000 locations. The following is placed
-          in alphabetical order.</b></center></p>
+    HTML("<p><center><b>The pie graph above provides data about the top 5, 10, or 15 fast
+          food restaurants in the country. It shows how much of the market each of these
+          chains owns compared to just the other top 5, 10 or 15 fast food chains and
+          in the total market.</b></center></p>
         <br>
-        <p> Ohio State has the highest number of fast food chains from this data. It has
-         a total of 922 locations. </p>"
+        <p> Subway owns the most fast food locations in America according to our
+         10,000 restaurant data set. </p>"
     )
   )
 )
 
 # Summary panel
-summary_panel <- 
-  mainPanel()
+summary_panel <- mainPanel(
+    includeHTML("summary.html"),
+  )
+  
 
 ui <- tagList(
   tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),

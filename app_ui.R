@@ -24,11 +24,10 @@ map_panel <- sidebarLayout(
     )
   ),
   mainPanel(
-    h2("Map of Most Widespread Food Chains", align = "center"),
+    h3("Map of Most Widespread Food Chains", align = "center"),
     leafletOutput("first_chart"),
-    HTML("<p>Insignt or description of the graph here.</p>
-        <br>
-        <p> More insights here </p>"
+    HTML("<p>Insignt or description of the graph here.
+        <br></p>"
     )
   )
 )
@@ -50,7 +49,7 @@ sidebarPanel(
     )
   ),
   mainPanel(
-    h2("States with Top Number of Fast Food Chains", align = "center"),
+    h3("States with Top Number of Fast Food Chains", align = "center"),
     plotlyOutput(outputId = "second_chart"),
     HTML("<p><center><b>The bar graph above provides the (abbreviated) state names with the highest concentration of 
           fast food chains within a Fast Food Distribution sample of 10,000 locations. The following is placed
@@ -78,7 +77,7 @@ pie_chart_panel <- sidebarLayout(
     )
   ),
   mainPanel(
-    h2("Top Restaurants Pie Chart", align = "center"),
+    h3("Top Restaurants Pie Chart", align = "center"),
     plotlyOutput(outputId = "third_chart"),
     HTML("<p><center><b>The pie graph above provides data about the top 5, 10, or 15 fast
           food restaurants in the country. It shows how much of the market each of these

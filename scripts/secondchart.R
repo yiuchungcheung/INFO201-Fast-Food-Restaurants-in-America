@@ -13,6 +13,7 @@ data <- read.csv(file = "data/Datafiniti_Fast_Food_Restaurants_May19.csv", strin
 second_new_chart <- function(df, number, colour_bar) {
   
   number <- as.numeric(number)
+  top_title <- paste0("Number of Top ", number, " Fast Food Restaurants by State")
   
   bar_graph <- df %>%
     group_by(province) %>%
@@ -25,6 +26,7 @@ second_new_chart <- function(df, number, colour_bar) {
       color = I(colour_bar)
     ) %>%
     layout(
+      title = top_title,
       xaxis = list(title = "State (Abr.)"),
       yaxis = list(title = "Total Number of Restaurants")
     )

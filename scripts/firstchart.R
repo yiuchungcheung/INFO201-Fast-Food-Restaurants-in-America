@@ -11,7 +11,7 @@ first_chart <- function(input_data, variable, color) {
    new_data <- data %>%
      group_by(name = tolower(name)) %>%
      filter(name == variable)
-
+  
   map <- leaflet(data = new_data) %>%
     addTiles() %>%
     addCircleMarkers(
@@ -24,7 +24,7 @@ first_chart <- function(input_data, variable, color) {
         "Address:", new_data$address, "<br>",
         "State:", new_data$province, "<br>"
       ),
-      color = ~color
+      color = ~color,
     )
   return(map)
 }
